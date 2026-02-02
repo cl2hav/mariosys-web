@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mariosys | Futuro experto IT</title>
+</head>
+<body>
+
+    <h1>Bienvenido a Mariosys.dev</h1>
+    <p>Este es el inicio de mi carrera en ASIR y DAW.</p>
+    <button onclick="saludo()">Púlsame para ver la magia</button>
+<p id="mensaje-secreto" style="margin-top: 20px;"></p>
+
+</body>
+</html>
+<style>
+    body {
+        background-color: #1a1a1a; /* Un gris oscuro muy pro */
+        color: #00ff41;           /* Verde estilo terminal/Matrix */
+        font-family: 'Courier New', Courier, monospace;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    h1 {
+        border-bottom: 2px solid #00ff41;
+        padding-bottom: 10px;
+    }
+    button {
+    background-color: transparent;
+    color: #00ff41;
+    border: 1px solid #00ff41;
+    padding: 10px 20px;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #00ff41;
+    color: #1a1a1a;
+}
+@keyframes parpadeo {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+h1::after {
+    content: "_";
+    animation: parpadeo 1s infinite;
+}
+</style>
+<script>
+    function saludo() {
+        // Escribimos el mensaje de texto
+        document.getElementById("mensaje-secreto").innerHTML = "> Sistema mariosys.dev inicializado correctamente... [OK]";
+        
+        // ¡Encendemos la luz de la caja!
+        document.getElementById("caja-proyectos").style.opacity = "1";
+    }
+</script>
+<div id="caja-proyectos" style="margin-top: 50px; border: 1px dashed #00ff41; padding: 20px; width: 80%; opacity: 0; transition: opacity 1.5s ease;">
+    <h3>> DIRECTORIO_PROYECTOS:</h3>
+    <ul style="list-style: none; text-align: left;">
+        <li>[X] Registro de dominio mariosys.dev ........... DONE</li>
+        <li>[X] Estructura HTML base ...................... DONE</li>
+        <li>[ ] Configuración de Servidor VPS ............. PENDING</li>
+        <li>[ ] Despliegue de IA Personal ................. PENDING</li>
+    </ul>
+    </div>
